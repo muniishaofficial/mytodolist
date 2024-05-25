@@ -1,6 +1,7 @@
 
 import React, { useCallback, useContext } from 'react';
 import { TodoContext } from '../TodoProvider/TodoContext';
+import DeleteIcon from '@material-ui/icons/Delete'
 
  function TodoItem({ todo }) {
   const { dispatch } = useContext(TodoContext);
@@ -20,7 +21,7 @@ import { TodoContext } from '../TodoProvider/TodoContext';
         <span className={`${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>
       </div>
       <button onClick={removeTodo} className="px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-700">
-        Remove
+        <DeleteIcon/>
       </button>
     </li>
   );

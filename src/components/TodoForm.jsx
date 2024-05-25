@@ -1,6 +1,7 @@
 // TodoForm.js
 import React, { useRef, useContext } from 'react';
 import { TodoContext } from '../TodoProvider/TodoContext';
+import AddIcon from '@material-ui/icons/AddCircle'
 
  function TodoForm() {
   const { dispatch } = useContext(TodoContext);
@@ -26,7 +27,7 @@ import { TodoContext } from '../TodoProvider/TodoContext';
         placeholder="Add a new todo"
       />
       <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700">
-        Add Todo
+        <AddIcon/> Add Todo
       </button>
     </form>
   );
